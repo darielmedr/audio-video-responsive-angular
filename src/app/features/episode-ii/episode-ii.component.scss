@@ -1,0 +1,55 @@
+/**
+* Section home
+*/
+.home-container {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 5;
+}
+
+.bg-image {
+    background: no-repeat center;
+    background-image: url('https://www.periodismodebarrio.org/wp-content/uploads/2020/12/Portada-web-La-Revolución.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bg-mask {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.episode-header {
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 0.2s;
+}
+.accent-title {
+    font-size: var(--font-size-title);
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 1s;
+}
+.accent-title strong {
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 3s;
+}

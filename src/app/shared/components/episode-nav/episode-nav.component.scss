@@ -1,0 +1,88 @@
+.container-wrapper {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 0.3s;
+}
+
+.container-wrapper,
+.nav,
+ul,
+#about-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-wrapper {
+    color: var(--color-primary-100);
+    font-size: var(--font-size-nav-item);
+}
+
+.nav span,
+.link-item a {
+    color: var(--color-primary-100);
+    font-weight: 700;
+}
+
+.nav span {
+    font-size: 0.8em;
+}
+
+#about-project {
+    font-size: 0.8em;
+    flex-direction: row;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+#about-project span {
+    position: relative;
+}
+#about-project span::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: none repeat scroll 0 0 transparent;
+    background-color: var(--color-accent-200);
+    content: '';
+    transition: all 0.3s ease-in-out;
+}
+#about-project span:hover:after {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+
+.link-item:not(:last-child)::after {
+    content: '\2022';
+    margin-right: 0.5em;
+    margin-left: 0.1em;
+}
+
+.router-link-active {
+    color: var(--color-primary-100);
+    background-color: var(--color-accent-200);
+    padding: 0 0.55rem;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+    }
+    .nav span {
+        padding-right: 1rem;
+        font-size: 0.9em;
+    }
+    .router-link-active {
+        padding: 0 0.8rem;
+    }
+}

@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~../src/sass/variables.scss';
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    font-family: var(--font-family-text);
+}
+body {
+    margin: 0;
+}
+
+.home-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    padding: 0 1.1rem;
+    text-align: center;
+    color: var(--color-primary-100);
+}
+
+.home-content-wrapper {
+    color: var(--color-primary-100);
+    margin: 0 auto;
+    padding-top: 3rem;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.episode-header {
+    font-size: var(--font-size-text);
+}
+
+.accent-title {
+    font-size: var(--font-size-accent);
+    line-height: 0.9;
+    margin-top: 2.5rem;
+    min-width: 9.375rem;
+}
+.accent-title strong {
+    font-size: var(--font-size-big);
+    color: var(--color-accent-200);
+}
+
+.diagonal-line {
+    height: 2rem;
+    width: 0.063rem;
+    background-color: var(--color-primary-100);
+    text-align: center;
+    transform: rotate(45deg);
+    margin: auto;
+}
+
+.btn-episode {
+    max-width: 20rem;
+    width: 100%;
+    min-height: 2rem;
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem;
+    background-color: var(--color-accent-200);
+    color: var(--color-primary-100);
+    font-weight: 600;
+}
+
+@keyframes showUp {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveXLogo {
+    100% {
+        transform: translateX(0);
+    }
+}

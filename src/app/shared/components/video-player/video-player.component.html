@@ -1,0 +1,22 @@
+<div class="content">
+    <div class="video-poster" *ngIf="!isVideoPlaying" [style]="getPosterImageStyle()">
+        <img
+            (click)="playVideo()"
+            src="https://elpais.com/estaticos/2019/04/frontera-sur/img/play.svg"
+            alt="play video logo"
+            id="play-logo"
+        />
+    </div>
+
+    <div #videoWrapper class="video-wrapper" [ngClass]="{ playing: isVideoPlaying }">
+        <video *ngIf="!isYoutubeVideo; else youtube" controls [src]="videoSrc" [poster]="posterSrc">
+            Sorry, your browser doesn't support embedded videos, but don't worry, you can
+            <a [href]="sanitizeUrl(videoSrc)">download it</a>
+            and watch it with your favorite video player!
+        </video>
+
+        <ng-template #youtube>
+            <youtube-player id="youtubePlayer" [width]="width" [height]="height" *ngIf="isApiLoaded"  [videoId]="youtubeId"> </youtube-player>
+        </ng-template>
+    </div>
+</div>

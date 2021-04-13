@@ -1,0 +1,61 @@
+/**
+* Section home
+*/
+.home-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.bg-image {
+    background: url('https://ep01.epimg.net/especiales/2019/frontera-sur/img/capitulo1.jpg') no-repeat right;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+
+    transform: scale(1.3);
+    animation: zoomOut 5s ease-in-out forwards 1.5s,
+               showUp 1.5s ease-in-out forwards 1s;
+}
+
+.episode-header {
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 0.2s;
+}
+.accent-title {
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 1s;
+}
+.accent-title strong {
+    opacity: 0;
+    animation: showUp 1s ease-in-out forwards 3s;
+}
+
+/**
+* Section audio
+*/
+
+/**
+*  keyframes
+*/
+@keyframes zoomOut {
+    100% {
+        transform: scale(1);
+    }
+}

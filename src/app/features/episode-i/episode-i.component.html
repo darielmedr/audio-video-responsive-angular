@@ -1,0 +1,25 @@
+<section class="home-container">
+    <div class="bg-image"></div>
+    <div class="home-content">
+        <app-episode-nav class="nav" (scrollToAbout)="scrollTo(audioSection)"></app-episode-nav>
+
+        <div class="home-content-wrapper">
+            <h2 class="episode-header">FRONTERA SUR. <strong>CAP 1.</strong></h2>
+            <h3 class="accent-title">El Caribe <br /><strong>turbio</strong></h3>
+            <div class="diagonal-line"></div>
+            <app-logo></app-logo>
+        </div>
+    </div>
+</section>
+
+<section #audioSection>
+    <app-summary></app-summary>
+</section>
+
+<section>
+    <app-report></app-report>
+</section>
+
+<section>
+    <app-interview></app-interview>
+</section>

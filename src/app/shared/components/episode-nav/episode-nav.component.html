@@ -1,0 +1,14 @@
+<div class="container-wrapper" role="banner">
+    <div class="nav">
+        <span>CAP&Iacute;TULO</span>
+        <ul>
+            <li class="link-item" *ngFor="let item of linkItems" >
+                <a [routerLink]="['/', item.path]" routerLinkActive="router-link-active" >{{item.title}}</a>
+            </li>
+        </ul>
+    </div>
+    <a id="about-project" (click)="scollToElement()">
+        <span>Sobre el proyecto</span>
+        <mat-icon>chevron_right</mat-icon>
+    </a>
+</div>

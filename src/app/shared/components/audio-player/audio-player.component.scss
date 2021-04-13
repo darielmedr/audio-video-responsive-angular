@@ -1,0 +1,34 @@
+.audio-container {
+    padding: 0;
+    margin: 0;
+    min-width: 250px !important;
+    max-width: 768px;
+}
+
+.divider,
+.col-player,
+.col-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-player,
+.col-controls {
+    min-width: 100px;
+}
+
+.audio-slider {
+    flex: 1 1 auto;
+}
+
+.col-controls {
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 550px) {
+    .divider {
+        flex-wrap: nowrap;
+    }
+}

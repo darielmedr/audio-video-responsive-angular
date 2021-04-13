@@ -1,0 +1,30 @@
+:root {
+    /* Colors */
+    --color-primary-100: #fff;
+    --color-accent-200: #fe004d;
+
+    /* Font Families */
+    --font-family-text: 'Taviraj', serif;
+    --font-family-accent: 'Taviraj', serif;
+
+    /* Font Sizes */
+    --font-size-nav-item: rem;
+    --font-size-text: 1.25rem;
+    --font-size-title: 2rem;
+    --font-size-accent: 3.5rem;
+    --font-size-big: 4.8rem;
+
+    @media screen and (min-width: 768px) {
+        /* Font Sizes */
+        --font-size-nav-item: 1.6rem;
+        --font-size-title: 2.8rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        /* Font Sizes */
+        --font-size-text: 1.875rem;
+        --font-size-title: 3.5rem;
+        --font-size-accent: 5.25rem;
+        --font-size-big: 7.2rem;
+    }
+}

@@ -1,0 +1,30 @@
+.header-logo {
+    padding-top: 1.3rem;
+    display: inline-flex;
+}
+
+.elpais-logo,
+.elfaro-logo {
+    overflow: hidden;
+}
+.elpais-logo a img {
+    transform: translateX(120%);
+    animation: moveXLogo 1s ease-in-out forwards 1s;
+}
+.elfaro-logo a img {
+    transform: translateX(-120%);
+    animation: moveXLogo 1s ease-in-out forwards 1s;
+}
+
+.header-logo img {
+    height: 1.6rem;
+}
+
+.vertical-line {
+    color: var(--color-primary-100);
+    margin: 0 0.8rem;
+    height: 1.6rem;
+    border: solid 1px;
+    opacity: 0;
+    animation: showUp 0.5s ease-out 0.3s forwards;
+}
