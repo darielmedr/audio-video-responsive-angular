@@ -13,11 +13,11 @@ const routes: Routes = [
     component: MainLayoutComponent
   },
   {
-    path: 'episode1',
+    path: 'episode2',
     loadChildren: () => import('./features/episode-i/episode-i.module').then(m => m.EpisodeIModule)
   },
   {
-    path: 'episode2',
+    path: 'episode1',
     loadChildren: () => import('./features/episode-ii/episode-ii.module').then(m => m.EpisodeIiModule)
   },
   {
@@ -28,7 +28,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules,
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

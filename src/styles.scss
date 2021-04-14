@@ -12,19 +12,38 @@ body {
     margin: 0;
 }
 
-.home-wrapper {
+.episode-wrapper {
+    z-index: 0;
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
-    padding: 0 1.1rem;
     text-align: center;
     color: var(--color-primary-100);
 }
 
-.home-content-wrapper {
+.bg-mask {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.episode-body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 1.1rem;
+}
+
+.episode-content-wrapper {
     color: var(--color-primary-100);
     margin: 0 auto;
     padding-top: 3rem;
@@ -39,10 +58,11 @@ body {
 }
 
 .accent-title {
-    font-size: var(--font-size-accent);
+    font-size: var(--font-size-title);
     line-height: 0.9;
     margin-top: 2.5rem;
     min-width: 9.375rem;
+    line-height: 1.5;
 }
 .accent-title strong {
     font-size: var(--font-size-big);
@@ -71,6 +91,10 @@ body {
 }
 
 @keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+
     100% {
         opacity: 1;
     }

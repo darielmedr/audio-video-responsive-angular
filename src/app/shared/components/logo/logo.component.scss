@@ -3,11 +3,12 @@
     display: inline-flex;
 }
 
-.elpais-logo,
+.periodismo-de-barrio-logo,
 .elfaro-logo {
     overflow: hidden;
+    padding: 0 1rem;
 }
-.elpais-logo a img {
+.periodismo-de-barrio-logo a img {
     transform: translateX(120%);
     animation: moveXLogo 1s ease-in-out forwards 1s;
 }
@@ -22,7 +23,6 @@
 
 .vertical-line {
     color: var(--color-primary-100);
-    margin: 0 0.8rem;
     height: 1.6rem;
     border: solid 1px;
     opacity: 0;
