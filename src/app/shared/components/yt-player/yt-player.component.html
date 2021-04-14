@@ -1,0 +1,15 @@
+<div #videoWrapper class="video-wrapper">
+    <youtube-player
+        [videoId]="videoId"
+        [width]="width"
+        [height]="height"
+    >
+    </youtube-player>
+
+    <div class="video-poster" *ngIf="posterUrl && !isVideoPlaying">
+        <img id="poster" [src]="posterUrl" alt="video poster">
+        <div (click)="playVideo()">
+            <mat-icon id="play-icon">play_arrow</mat-icon>
+        </div>
+    </div>
+</div>

@@ -7,8 +7,8 @@ import { SecondsToMinutesPipe } from './pipes/seconds-to-minutes.pipe';
 import { EpisodeNavComponent } from './components/episode-nav/episode-nav.component';
 import { RouterModule } from '@angular/router';
 import { LogoComponent } from './components/logo/logo.component';
-import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { YtPlayerComponent } from './components/yt-player/yt-player.component';
 
 const commonElements: any[] = [
   ScrollProgressDirective,
@@ -16,7 +16,7 @@ const commonElements: any[] = [
   SecondsToMinutesPipe,
   EpisodeNavComponent,
   LogoComponent,
-  VideoPlayerComponent,
+  YtPlayerComponent,
 ];
 
 @NgModule({
